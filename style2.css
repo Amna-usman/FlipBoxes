@@ -1,0 +1,85 @@
+.main {
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+}
+
+.cube {
+    perspective: 10000px;
+    width: 100%;
+    height: 100%;
+    perspective-origin: 150% 150%;
+    transform-style: preserve-3d;
+    animation: ani 7s infinite;
+}
+
+.layer {
+    position: absolute;
+    line-height: 200px;
+    width: 200px;
+    height: 200px;
+    font-size: 50px;
+    color: #000;
+    text-align: center;
+}
+
+.right {
+    background-color: rgb(90, 156, 140);
+    transform: rotateY(90deg) translateZ(100px);
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTecJxnKF-7-cw9xFlqNJqVTPrxHRPjaXy6cg&s');
+    background-size: cover;
+}
+
+
+.left {
+    background-color: green;
+    transform: rotateY(-90deg) translateZ(100px);
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDcGMrT83pIWFqbVNaXT3pcCWRjkzcNJFtxQ&s');
+    background-size: cover;
+}
+
+.front {
+    background-color: yellow;
+    transform: translateZ(100px);
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZdi1gPF8GIlpjQ90VNSR18cxQgmXzT3Fgaw&s');
+    background-size: cover;
+}
+
+.back {
+    background-color: cyan;
+    transform: rotateY(180deg) translateZ(100px);
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPfaN28GWjSd5J0mduWALhjg-Kjgd2GYNvFA&s');
+    background-size: cover;
+}
+
+.top {
+    background-color: purple;
+    transform: rotateX(90deg) translateZ(100px);
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAxalztRFcYi21bho3ljW37YEyCMAxHobNAQ&s');
+    background-size: cover;
+}
+
+.bottom {
+    background-color: blue;
+    transform: rotateX(-90deg) translateZ(100px);
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDcGMrT83pIWFqbVNaXT3pcCWRjkzcNJFtxQ&s');
+    background-size: cover;
+}
+
+@keyframes ani {
+    25% {
+        transform: rotateX(360deg);
+    }
+
+    50% {
+        transform: rotateY(180deg) translateZ(100px);
+    }
+
+    75% {
+        transform: rotateY(35deg) rotateX(45deg);
+    }
+
+    100% {
+        transform: rotateY(270deg) rotateX(360deg);
+    }
+}
