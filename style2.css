@@ -5,10 +5,8 @@
 }
 
 .cube {
-    perspective: 10000px;
     width: 100%;
     height: 100%;
-    perspective-origin: 150% 150%;
     transform-style: preserve-3d;
     animation: ani 7s infinite;
 }
